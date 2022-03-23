@@ -118,7 +118,7 @@
  margin: 0;
 }
 
-.span-accent {
+.two-columns__span-accent {
   font-size: 24px;
   line-height: 34px;
   font-weight: bolder;
@@ -170,14 +170,6 @@
   margin-top: 60px;
 }
 
-.table__cell:nth-child(2) .table__text:last-child {
-  margin: 0;
-}
-
-.table__cell:nth-child(5) .table__text:last-child {
-  margin: 0;
-}
-
 .table__cell_theme_dark {
   width: 200px;
   color: white;
@@ -204,6 +196,10 @@
   margin: 0 0 20px 0;
 }
 
+.table__text:last-of-type {
+  margin: 0;
+}
+
 .table__text_theme_dark {
   margin: 0;
 }
@@ -216,10 +212,7 @@
   height: 890px;
   position: relative;
   background-size: 867px 637px;
-  background-image: url('../images/feynman.png');
-  background-repeat: no-repeat;
-  background-position: left bottom;
-  background-color:  #f2f2f2;
+  background: no-repeat left bottom url('../images/feynman.png'), #f2f2f2;
 }
 
 .feynman__title {
@@ -237,6 +230,7 @@
   line-height: 51px;
   font-size: 36px;
   text-align: center;
+  margin: 70px 0 0;
 }
 
 .feynman__link {
@@ -277,6 +271,7 @@
   background-color: #1f1f1f;
   padding: 60px 0 40px;
   min-height: 350px;
+  box-sizing: border-box;
   }
 
   .footer__columns {
@@ -284,24 +279,27 @@
     width: 90%;
     display: flex;
     justify-content: space-between;
-    min-height: 350px;
+    min-height: 250px;
   }
 
-  .footer__column_content_copyright {
+  .footer__column {
     display: flex;
-    flex-basis: 711px;
-    justify-content: space-between;
     flex-direction: column;
   }
 
-  .footer__column-heading {
+  .footer__column_content_copyright {
+    flex-basis: 711px;
+    justify-content: space-between;
+  }
+
+    .footer__column-heading {
     margin: 0 0 20px 0;
     line-height: 30px;
     font-size: 18px;
     font-weight: bolder;
   }
 
-  .footer__column-links {
+  .footer__list {
     list-style: none;
     margin: 0 0 16px 0;
     padding: 0;
@@ -313,12 +311,12 @@
   .footer__column-link {
     text-decoration: none;
     color: white;
-    margin-bottom: 10px;
   }
 
   .footer__social-icon {
     width: 16px;
     height: 16px;
+    margin-right: 10px;
   }
 
   .footer__author {
