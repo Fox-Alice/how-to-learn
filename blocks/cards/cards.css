@@ -2,5 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   width: 920px;
-  margin: auto;
+  margin: 0 auto;
+  list-style: none;
+  padding: 0;
 }
